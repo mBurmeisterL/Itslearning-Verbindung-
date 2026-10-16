@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "itslearning-calendar-mcp",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-06-01",
+  "observability": { "enabled": true },
+  "vars": {
+    // Zeitzone für Anzeige und für Datumsangaben ohne Uhrzeit
+    "DISPLAY_TZ": "Europe/Berlin",
+    // Wie lange der Feed zwischengespeichert wird (Sekunden)
+    "CACHE_TTL_SECONDS": "300"
+    // Optional: eigene Schlüsselwörter für Abgaben (Regex, case-insensitive), z. B.
+    // "ASSIGNMENT_KEYWORDS": "abgabe|aufgabe|frist"
+  }
+  // Geheimnisse (NICHT hier eintragen!), stattdessen:
+  //   npx wrangler secret put ICAL_URL
+  //   npx wrangler secret put MCP_TOKEN
+}
